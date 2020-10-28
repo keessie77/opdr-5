@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Opdracht 5n</title>
+ 
+</head>
+
+<body>
+    <input type=button value=knopA id=knopA onclick="knop('A')">
+    <input type=button value=knopB id=knopB onclick="knop('B')">
+    <input type=button value=knopC id=knopC onclick="knop('C')">
+    <input type=button value=knopD id=knopD onclick="knop('D')">
+    
+
+  <div id="controleer">
+
+  <p id="box"></p>
+
+  </div> 
+  
+</body>
+<script>
+  function knop(deknop){
+      var zin = "U heeft op knop";
+      var zin2 = " gedrukt";
+      var zin3= "U heeft al op knop";
+      var totaal = zin + deknop + zin2;
+      var totaal1 = zin3 + deknop + zin2;
+      var appenddata = document.getElementById("box");
+      var log = document.getElementById("controleer").textContent;
+        var include = log.includes(totaal);
+      
+      
+      if (include == true){
+    
+          alert (totaal1);
+      }
+
+      else {
+        appenddata.insertAdjacentHTML('afterend', '<p>' + totaal + '</p>' );
+      }
+        
+        
+  }
+      
+  
+ /*var alGekliktOpKnopA = 0 ;
+  //function knop5 (knopC){
+    //  if (alGekliktOpKnopA <= 2){
+      //    alert ("dit mag niet");
+      }
+      alGekliktOpKnopA ++;
+  }*/
+
+</script>
+</html>
